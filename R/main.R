@@ -255,13 +255,8 @@ for(i in 1:length(clst.meth)){
 }
 
 load("RealData.RData")
-load("LungCancerDataLUSCLUADClinical.restart.2020.RData")
+load("LungCancerDataLUSCLUADClinical.RData")
 
-sub.genes <- subset(merged.data, Platform == "geneExp")
-sub.methylation <- subset(merged.data, Platform == "methylation")
-
-genes.RNA <- sub.genes[colnames(data[[1]]), 1]
-genes.meth <- sub.methylation[colnames(data[[2]]), 1]
 
 slt.RNA <- genes.RNA[prob.mRNA]
 slt.meth <- genes.meth[prob.meth]
