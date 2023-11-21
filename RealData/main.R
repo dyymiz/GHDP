@@ -48,10 +48,10 @@ do.gamma.prob <- 1/20
 
 true_parm <- data1 <- NULL
 true_parm$clust$alpha_0 <- true_parm$clust$alpha_1 <- 22
-n.burn = 500
-n.reps = 1000
+n.burn = 10000
+n.reps = 50000
 max.row.nbhd.size = round(.1*25*250^.5) 
-max.col.nbhd.size = round(.05*250) 
+max.col.nbhd.size = round(.05*250)
 row.frac.probes = 0.05
 col.frac.probes = .1
 prob.compute.col.nbhd=.2
@@ -106,7 +106,7 @@ if (do.response){
     n0 = n2-n1
     
     n.burn <- 10000
-    n.reps <- 8000
+    n.reps <- 50000
     
     ###################
     # define storage objects
