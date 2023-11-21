@@ -44,9 +44,8 @@ true_parm <- gen.clust(s, t, w, m, p, n, r)
 X.sim <- simulate(s, t, w, m, p, n, r, tau, prob.overlap, true_parm)
 
 ### RUN
-di=10
-n.burn = 200/di
-n.reps = 200/di
+n.burn = 10000
+n.reps = 50000
 max.row.nbhd.size = round(.1*25*250^.5) # should be small compared to n2*p^d (~ n2*G if d=.5)
 max.col.nbhd.size = round(.05*250) # should be small compared to p
 row.frac.probes = 0.05
